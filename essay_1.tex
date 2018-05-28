@@ -1,0 +1,272 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Simple Sectioned Essay Template
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing essay content.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article} % Default font size is 12pt, it can be changed here
+
+\usepackage{geometry} % Required to change the page size to A4
+\geometry{a4paper} % Set the page size to be A4 as opposed to the default US Letter
+
+\usepackage{graphicx} % Required for including pictures
+
+\usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+\usepackage{wrapfig} % Allows in-line images such as the example fish picture
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\linespread{1.2} % Line spacing
+
+%\setlength\parindent{0pt} % Uncomment to remove all indentation from paragraphs
+
+\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
+
+
+\usepackage{amsmath,amsthm}
+
+
+
+
+
+
+
+
+
+
+\newcommand{\e}{\mathrm{e}}
+
+
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+
+\textsc{\LARGE University Name}\\[1.5cm] % Name of your university/college
+\textsc{\Large Major Heading}\\[0.5cm] % Major heading such as course name
+\textsc{\large Minor Heading}\\[0.5cm] % Minor heading such as course title
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Title}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+John \textsc{Smith} % Your name
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Supervisor:} \\
+Dr. James \textsc{Smith} % Supervisor's Name
+\end{flushright}
+\end{minipage}\\[4cm]
+
+{\large \today}\\[3cm] % Date, change the \today to a set date if you want to be precise
+
+%\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\tableofcontents % Include a table of contents
+
+\newpage % Begins the essay on a new page instead of on the same page as the table of contents 
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\section{SOLOW GROWTH MODEL} % Major section
+
+%Example citation \cite{Figueredo:2009dg}.
+
+%------------------------------------------------
+
+\subsection{Setup} % Sub-section
+The production function is $Y(t)=F(K(t),A(t)L(t))$ or alternatively in intensive form $y(t)=f(k(t))$ in which $y=Y/(AL)$ and $k=K/(AL)$.
+\begin{align*}
+	\dot{L}(t) & =nL(t) \\
+	\dot{A}(t) & =gA(t) \\
+	\dot{K}(t) & =sY(t)-\delta K(t).
+\end{align*}
+These equations yield solution as follows
+\begin{align*}
+L(t) & =L(0)\e^{nt} \\
+A(t) & =A(0)\e^{gt} .
+\end{align*}
+Since the production function $F(K,AL)$ is not specified, we cannot give an explicit solution of $K(t)$. 
+\subsection{Stable Solution} % Sub-section
+For the sake of qualitative analysis, the system of differential equations can be simplified to a single differential equation with respect to $k(t)$:
+\[
+\dot{k}(t)=sf(k)-(n+g+\delta)k(t).
+\]
+\begin{figure}[H] % Example image
+	\center{\includegraphics[width=0.85\linewidth]{fig1}}
+	\caption{Actual and break-even investment}
+	\label{fig:speciation}
+\end{figure}
+As can be seen from the figure, the equation $sf(k)-(n+g+\delta)k(t)=0$ has unique solution $k^*=k^*(s,n,g,\delta)$. Then we can readily employ the diagrammatic analysis to find the stable solution.
+\begin{figure}[H] % Example image
+	\center{\includegraphics[width=0.6\linewidth]{fig2}}
+	\caption{\small Phase diagram for $k$}
+	\label{fig:speciation}
+\end{figure}
+When $t\rightarrow\infty$, the economy reaches its balanced growth path and thus we see
+\begin{align*}
+k(t) & \rightarrow k^*\\
+y(t) & \rightarrow f(k^*)\\
+L(t) & =L(0)\e^{nt} \\
+A(t) & =A(0)\e^{gt} \\
+K(t) & \sim K(0)\e^{(n+g)t}\\
+Y(t) & \sim Y(0)\e^{(n+g)t}.
+\end{align*}
+
+\subsection{Consumption}
+Let $c(t)$ denote consumption per unit of effective labor, and we have
+\[
+c(t)=(1-s)f(k)
+\]
+On the balanced growth path
+\[
+c^*=(1-s)f(k^*)=f(k^*)-(n+g+\delta)k^*.
+\] 
+\subsection{Typical Example}
+
+Setting $Y=K^\alpha (AL)^{1-\alpha}$ and accordingly $y(t)=k(t)^\alpha$, we get the differential equation with respect to $k(t)$:
+\[
+\dot{k}=sk^\alpha-(n+g+\delta)k.
+\]
+The capital per unit of effective labor 
+\[
+k(t)=\left[\dfrac{\widetilde{C}\e^{-(1-\alpha)(n+g+\delta)t}+s}{n+g+\delta}\right]^{\tfrac{1}{1-\alpha}}.
+\]
+solves the equation, where $\widetilde{C}$ is a constant to be specified by the initial condition $k(0)=k_0$. On the balanced growth path, 
+\[
+\lim\limits_{t\rightarrow+\infty}k(t)=k^*=\left(\dfrac{s}{n+g+\delta}\right)^{1/(1-\alpha)}
+\]
+%------------------------------------------------
+
+
+
+\newpage
+
+
+\section{The Ramsey-Cass-Koopmans Model} 
+\subsection{Setup} % Sub-section
+The production function is $Y(t)=F(K(t),A(t)L(t))$ or alternatively in intensive form $y(t)=f(k(t))$ in which $y=Y/(AL)$ and $k=K/(AL)$.
+\begin{align*}
+\dot{L}(t) & =nL(t) \\
+\dot{A}(t) & =gA(t) \\
+\dot{K}(t) & =sY(t)-\delta K(t).
+\end{align*}
+\section{Content Section} % Major section
+
+\lipsum[5] % Dummy text
+
+%------------------------------------------------
+
+\subsection{Subsection 1} % Sub-section
+
+\subsubsection{Subsubsection 1} % Sub-sub-section
+
+\lipsum[6] % Dummy text
+
+%------------------------------------------------
+
+\subsubsection{Subsubsection 2} % Sub-sub-section
+
+\lipsum[6] % Dummy text
+%\begin{wrapfigure}{l}{0.4\textwidth} % Inline image example
+%  \begin{center}
+%    \includegraphics[width=0.38\textwidth]{fish}
+%  \end{center}
+%  \caption{Fish}
+%\end{wrapfigure}
+\lipsum[7-8] % Dummy text
+
+%------------------------------------------------
+
+\subsubsection{Subsubsection 3} % Sub-sub-section
+
+\begin{description} % Numbered list example
+
+\item[First] \hfill \\
+\lipsum[9] % Dummy text
+
+\item[Second] \hfill \\
+\lipsum[10] % Dummy text
+
+\item[Third] \hfill \\
+\lipsum[11] % Dummy text
+
+\end{description} 
+
+%----------------------------------------------------------------------------------------
+%	MAJOR SECTION X - TEMPLATE - UNCOMMENT AND FILL IN
+%----------------------------------------------------------------------------------------
+
+%\section{Content Section}
+
+%\subsection{Subsection 1} % Sub-section
+
+% Content
+
+%------------------------------------------------
+
+%\subsection{Subsection 2} % Sub-section
+
+% Content
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSION
+%----------------------------------------------------------------------------------------
+
+\section{Conclusion} % Major section
+
+\lipsum[12-13]
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+
+\bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
+Figueredo, A.~J. and Wolf, P. S.~A. (2009).
+\newblock Assortative pairing and life history strategy - a cross-cultural
+  study.
+\newblock {\em Human Nature}, 20:317--330.
+ 
+\end{thebibliography}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
