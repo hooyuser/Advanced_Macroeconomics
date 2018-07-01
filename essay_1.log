@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.25)  18 MAY 2018 20:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.25)  1 JUL 2018 16:40
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -174,6 +174,12 @@ Package: amsthm 2015/03/04 v2.20.2
 
 LaTeX Warning: Label `fig:speciation' multiply defined.
 
+
+LaTeX Warning: Label `fig:speciation' multiply defined.
+
+
+LaTeX Warning: Label `fig:speciation' multiply defined.
+
 )
 \openout1 = `essay_1.aux'.
 
@@ -289,31 +295,76 @@ e
 \openout3 = `essay_1.toc'.
 
 
-[1] <fig1.pdf, id=13, 939.51pt x 447.6725pt>
+[1] <fig1.pdf, id=13, 361.35pt x 149.55875pt>
 File: fig1.pdf Graphic file (type pdf)
  <use fig1.pdf>
-Package pdftex.def Info: fig1.pdf used on input line 132.
-(pdftex.def)             Requested size: 355.51817pt x 169.40007pt.
-
-<fig2.pdf, id=14, 361.35pt x 239.89626pt>
+Package pdftex.def Info: fig1.pdf used on input line 133.
+(pdftex.def)             Requested size: 355.51817pt x 147.14621pt.
+ [2]
+<fig2.pdf, id=22, 361.35pt x 239.89626pt>
 File: fig2.pdf Graphic file (type pdf)
  <use fig2.pdf>
-Package pdftex.def Info: fig2.pdf used on input line 138.
+Package pdftex.def Info: fig2.pdf used on input line 139.
 (pdftex.def)             Requested size: 250.95476pt x 166.60843pt.
- [2 <./fig1.pdf>]
-[3 <./fig2.pdf>] [4] [5] [6] [7] [8] (./essay_1.aux)
+ [3 <./fig1.pdf> <./fig2.pdf
+
+pdfTeX warning: pdflatex.exe (file ./fig2.pdf): PDF inclusion: multiple pdfs wi
+th page group included in a single page
+>] <fig3.pdf, id=74, 361.35pt x 223.83624pt>
+File: fig3.pdf Graphic file (type pdf)
+ <use fig3.pdf>
+Package pdftex.def Info: fig3.pdf used on input line 166.
+(pdftex.def)             Requested size: 313.69025pt x 194.31586pt.
+ [4]
+<fig4_1.pdf, id=78, 361.35pt x 161.60374pt>
+File: fig4_1.pdf Graphic file (type pdf)
+ <use fig4_1.pdf>
+Package pdftex.def Info: fig4_1.pdf used on input line 172.
+(pdftex.def)             Requested size: 230.04079pt x 102.87862pt.
+
+<fig4_2.pdf, id=79, 361.35pt x 163.61125pt>
+File: fig4_2.pdf Graphic file (type pdf)
+ <use fig4_2.pdf>
+Package pdftex.def Info: fig4_2.pdf used on input line 173.
+(pdftex.def)             Requested size: 230.04079pt x 104.1566pt.
+
+<fig4_3.pdf, id=80, 361.35pt x 161.60374pt>
+File: fig4_3.pdf Graphic file (type pdf)
+ <use fig4_3.pdf>
+Package pdftex.def Info: fig4_3.pdf used on input line 174.
+(pdftex.def)             Requested size: 230.04079pt x 102.87862pt.
+
+<fig4_4.pdf, id=81, 361.35pt x 168.63pt>
+File: fig4_4.pdf Graphic file (type pdf)
+ <use fig4_4.pdf>
+Package pdftex.def Info: fig4_4.pdf used on input line 175.
+(pdftex.def)             Requested size: 230.04079pt x 107.3516pt.
+ [5 <./fig3.pdf>]
+[6 <./fig4_1.pdf> <./fig4_2.pdf
+
+pdfTeX warning: pdflatex.exe (file ./fig4_2.pdf): PDF inclusion: multiple pdfs 
+with page group included in a single page
+> <./fig4_3.pdf
+
+pdfTeX warning: pdflatex.exe (file ./fig4_3.pdf): PDF inclusion: multiple pdfs 
+with page group included in a single page
+> <./fig4_4.pdf
+
+pdfTeX warning: pdflatex.exe (file ./fig4_4.pdf): PDF inclusion: multiple pdfs 
+with page group included in a single page
+>] [7] [8] [9] [10] [11] (./essay_1.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2991 strings out of 493013
- 40080 string characters out of 6136993
+ 3015 strings out of 493013
+ 40397 string characters out of 6136993
  210970 words of memory out of 5000000
- 6493 multiletter control sequences out of 15000+600000
- 12212 words of font info for 43 fonts, out of 8000000 for 9000
+ 6512 multiletter control sequences out of 15000+600000
+ 11911 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,9n,25p,584b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,9n,25p,618b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
 live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/201
 6/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2016/texmf-d
@@ -325,10 +376,10 @@ nts/cm/cmr10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2
 016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2016/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on essay_1.pdf (9 pages, 172595 bytes).
+Output written on essay_1.pdf (12 pages, 236760 bytes).
 PDF statistics:
- 138 PDF objects out of 1000 (max. 8388607)
- 96 compressed objects within 1 object stream
+ 245 PDF objects out of 1000 (max. 8388607)
+ 166 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

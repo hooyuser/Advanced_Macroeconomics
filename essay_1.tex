@@ -62,33 +62,34 @@
 
 \center % Center everything on the page
 
-\textsc{\LARGE University Name}\\[1.5cm] % Name of your university/college
-\textsc{\Large Major Heading}\\[0.5cm] % Major heading such as course name
-\textsc{\large Minor Heading}\\[0.5cm] % Minor heading such as course title
+\textsc{\LARGE Economics Notes}\\[2cm] % Name of your university/college
+%\textsc{\Large Major Heading}\\[0.5cm] % Major heading such as course name
+%\textsc{\large Minor Heading}\\[0.5cm] % Minor heading such as course title
 
-\HRule \\[0.4cm]
-{ \huge \bfseries Title}\\[0.4cm] % Title of your document
+\HRule \\[0.8cm]
+{ \huge \bfseries Advanced Macroeconomics}\\[0.4cm] % Title of your document
+{ \large \bfseries by David Romer}\\[0.1cm]
 \HRule \\[1.5cm]
 
 \begin{minipage}{0.4\textwidth}
 \begin{flushleft} \large
-\emph{Author:}\\
-John \textsc{Smith} % Your name
+\emph{}\\
+ \textsc{} % Your name
 \end{flushleft}
 \end{minipage}
 ~
 \begin{minipage}{0.4\textwidth}
 \begin{flushright} \large
-\emph{Supervisor:} \\
-Dr. James \textsc{Smith} % Supervisor's Name
+\emph{Author:} \\
+\textsc{Chen} % Supervisor's Name
 \end{flushright}
 \end{minipage}\\[4cm]
-
-{\large \today}\\[3cm] % Date, change the \today to a set date if you want to be precise
+\vfill
+{\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
 
 %\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
 
-\vfill % Fill the rest of the page with whitespace
+ % Fill the rest of the page with whitespace
 
 \end{titlepage}
 
@@ -104,17 +105,17 @@ Dr. James \textsc{Smith} % Supervisor's Name
 %	INTRODUCTION
 %----------------------------------------------------------------------------------------
 
-\section{SOLOW GROWTH MODEL} % Major section
+\section{Solow Growth Model} % Major section
 
 %Example citation \cite{Figueredo:2009dg}.
 
 %------------------------------------------------
 
 \subsection{Setup} % Sub-section
-The production function is $Y(t)=F(K(t),A(t)L(t))$ or alternatively in intensive form $y(t)=f(k(t))$ in which $y=Y/(AL)$ and $k=K/(AL)$.
+Given the assumption of constant returns to scale, the production function is $Y(t)=F(K(t),A(t)L(t))$ or alternatively in intensive form $y(t)=f(k(t))$ in which $y=Y/(AL)$ and $k=K/(AL)$. $f(k)$ is assumed to satisfy $f(0)=0,f'(k)>0,f"(0)<0$ and the Inada conditions: $\lim_{k\rightarrow 0}f'(k)=\infty,\lim_{k\rightarrow \infty}f'(k)=0$. The evolution of the inputs into production are determined by
 \begin{align*}
-	\dot{L}(t) & =nL(t) \\
-	\dot{A}(t) & =gA(t) \\
+	\dot{L}(t) & =nL(t), \\
+	\dot{A}(t) & =gA(t), \\
 	\dot{K}(t) & =sY(t)-\delta K(t).
 \end{align*}
 These equations yield solution as follows
@@ -122,7 +123,7 @@ These equations yield solution as follows
 L(t) & =L(0)\e^{nt} \\
 A(t) & =A(0)\e^{gt} .
 \end{align*}
-Since the production function $F(K,AL)$ is not specified, we cannot give an explicit solution of $K(t)$. 
+Labor and knowledge grow at constant rates $n$ and $g$ respectively. Since the production function $F(K,AL)$ is not specified, we cannot give an explicit solution of $K(t)$. 
 \subsection{Stable Solution} % Sub-section
 For the sake of qualitative analysis, the system of differential equations can be simplified to a single differential equation with respect to $k(t)$:
 \[
@@ -133,7 +134,7 @@ For the sake of qualitative analysis, the system of differential equations can b
 	\caption{Actual and break-even investment}
 	\label{fig:speciation}
 \end{figure}
-As can be seen from the figure, the equation $sf(k)-(n+g+\delta)k(t)=0$ has unique solution $k^*=k^*(s,n,g,\delta)$. Then we can readily employ the diagrammatic analysis to find the stable solution.
+As the figure illustrates, the equation $sf(k)-(n+g+\delta)k(t)=0$ has unique solution $k^*=k^*(s,n,g,\delta)$. Then we can readily employ the diagrammatic analysis to find the stable solution. It is clear to see that regardless of where $k$ starts, it converge to $k^*$ and remains there.
 \begin{figure}[H] % Example image
 	\center{\includegraphics[width=0.6\linewidth]{fig2}}
 	\caption{\small Phase diagram for $k$}
@@ -150,17 +151,36 @@ Y(t) & \sim Y(0)\e^{(n+g)t}.
 \end{align*}
 
 \subsection{Consumption}
-Let $c(t)$ denote consumption per unit of effective labor, and we have
+While $s$ of the production $Y(t)$ are invested for more consumption in the future, the current consumption $C(t)$ accounts for $1-s$ of the production $Y(t)$. Let $c(t)$ denote the consumption per unit of effective labor, that  is
 \[
-c(t)=(1-s)f(k)
+c(t)=(1-s)f(k).
 \]
-On the balanced growth path
+On the balanced growth path it follows that
 \[
 c^*=(1-s)f(k^*)=f(k^*)-(n+g+\delta)k^*.
 \] 
+
+\subsection{The Impact of a Change in Saving Rate}
+\subsubsection{The Impact on Output}
+\begin{figure}[H] % Example image
+	\center{\includegraphics[width=0.75\linewidth]{fig3}}
+	\caption{\small The effects of an increase in saving rate on investment}
+	\label{fig:speciation}
+\end{figure}
+
+\begin{figure}[H] % Example image
+	\center{\includegraphics[width=0.55\linewidth]{fig4_1}}
+	\center{\includegraphics[width=0.55\linewidth]{fig4_2}}
+	\center{\includegraphics[width=0.55\linewidth]{fig4_3}}
+	\center{\includegraphics[width=0.55\linewidth]{fig4_4}}
+	\caption{\small The effects of an increase in saving rate}
+	\label{fig:speciation}
+\end{figure}
+
+
 \subsection{Typical Example}
 
-Setting $Y=K^\alpha (AL)^{1-\alpha}$ and accordingly $y(t)=k(t)^\alpha$, we get the differential equation with respect to $k(t)$:
+Setting $Y=K^\alpha (AL)^{1-\alpha}\;(0<\alpha<1)$ and accordingly $y(t)=k(t)^\alpha$, we get the differential equation with respect to $k(t)$:
 \[
 \dot{k}=sk^\alpha-(n+g+\delta)k.
 \]
