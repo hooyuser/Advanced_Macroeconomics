@@ -124,6 +124,7 @@ L(t) & =L(0)\e^{nt} \\
 A(t) & =A(0)\e^{gt} .
 \end{align*}
 Labor and knowledge grow at constant rates $n$ and $g$ respectively. Since the production function $F(K,AL)$ is not specified, we cannot give an explicit solution of $K(t)$. 
+
 \subsection{Stable Solution} % Sub-section
 For the sake of qualitative analysis, the system of differential equations can be simplified to a single differential equation with respect to $k(t)$:
 \[
@@ -173,7 +174,25 @@ c^*=(1-s)f(k^*)=f(k^*)-(n+g+\delta)k^*.
 	\center{\includegraphics[width=0.55\linewidth]{fig4_2}}
 	\center{\includegraphics[width=0.55\linewidth]{fig4_3}}
 	\center{\includegraphics[width=0.55\linewidth]{fig4_4}}
+	\center{\includegraphics[width=0.55\linewidth]{fig4_5}}
 	\caption{\small The effects of an increase in saving rate}
+	\label{fig:speciation}
+\end{figure}
+
+\subsubsection{The Impact on Consumption}
+
+\begin{figure}[H] % Example image
+	\center{\includegraphics[width=0.5\linewidth]{fig5_1}}
+	\center{\includegraphics[width=0.5\linewidth]{fig5_2}}
+	\center{\includegraphics[width=0.5\linewidth]{fig5_3}}
+	\caption{\small The effects of an increase in saving rate on consumption}
+	\label{fig:speciation}
+\end{figure}
+
+
+\begin{figure}[H] % Example image
+	\center{\includegraphics[width=0.55\linewidth]{fig6}}
+	\caption{\small The effects of an increase in saving rate on consumption}
 	\label{fig:speciation}
 \end{figure}
 
@@ -194,19 +213,59 @@ solves the equation, where $\widetilde{C}$ is a constant to be specified by the 
 \]
 %------------------------------------------------
 
-
+\subsection{Quantitative Implications}
+Since $y^*(s,n,g,\delta)=f(k^*(s,n,g,\delta))$,
+\[
+\frac{\partial y^*}{\partial s}=\frac{\partial k^*}{\partial s}f'(k^*)
+\]
+\[
+\frac{\partial k^*}{\partial s}=\frac{f(k^*)}{(n+g+\delta)-sf'(k^*)}
+\]
+\begin{align*}
+\frac{s}{y^*}\frac{\partial y^*}{\partial s}&=\frac{s}{y^*}\frac{f'(k^*)f(k^*)}{(n+g+\delta)-sf'(k^*)}\\
+&=\frac{\alpha_K(k^*)}{1-\alpha_K(k^*)}
+\end{align*}
 
 \newpage
 
 
 \section{The Ramsey-Cass-Koopmans Model} 
 \subsection{Setup} % Sub-section
-The production function is $Y(t)=F(K(t),A(t)L(t))$ or alternatively in intensive form $y(t)=f(k(t))$ in which $y=Y/(AL)$ and $k=K/(AL)$.
+Households' maximization problem is 
+\[
+\max\; B\int_{0}^{\infty}e^{-\beta t}\frac{c(t)^{1-\theta}}{1-\theta}dt
+\]
+\[
+\mathrm{s.t.}\;k'(t)=f(k(t))+c(t)-(n+g)k(t) 
+\]
+where $B=A(0)^{1-\theta}L(0)/H$, $\beta=\rho-n-(1-\theta)g$. Hamilton function is
+\[
+H=e^{-\beta t}\frac{c(t)^{1-\theta}}{1-\theta}+\lambda(t)[f(k(t))+c(t)-(n+g)k(t)],
+\]
+which leads to Hamilton equations
 \begin{align*}
-\dot{L}(t) & =nL(t) \\
-\dot{A}(t) & =gA(t) \\
-\dot{K}(t) & =sY(t)-\delta K(t).
+\frac{\partial H}{\partial c} & =e^{-\beta t}c^{-\theta}+\lambda=0,\\
+\frac{\partial H}{\partial k} & =\lambda [f'(k)-(n+g)]=-\lambda'.
 \end{align*}
+Substituting $\beta$ into it yields the Euler equation
+\[
+\frac{c'}{c}=\frac{f'(k)-\rho-\theta g}{\theta}
+\]
+
+
+
+\subsection{Stable Solution} 
+
+
+
+\begin{figure}[H] % Example image
+	\center{\includegraphics[width=0.8\linewidth]{fig7}}
+	\caption{\small The effects of an increase in saving rate on consumption}
+	\label{fig:speciation}
+\end{figure}
+
+
+
 \section{Content Section} % Major section
 
 \lipsum[5] % Dummy text
