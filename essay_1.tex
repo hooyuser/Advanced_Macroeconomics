@@ -260,11 +260,24 @@ Substituting $\beta$ into it yields the Euler equation
 
 \begin{figure}[H] % Example image
 	\center{\includegraphics[width=0.8\linewidth]{fig7}}
-	\caption{\small The effects of an increase in saving rate on consumption}
+	\caption{\small The dynamics of $k$ and $c$}
 	\label{fig:speciation}
 \end{figure}
 
-
+\section{The Diamond Model}
+\subsection{Setup} % Sub-section
+Let $C_{1,t}$ and $C_{2,t+1}$ denote the consumption in period $t$ of young and old individuals.
+Households' maximization problem is 
+\[
+\max\; \frac{C_{1,t}^{1-\theta}}{1-\theta}+\frac{1}{1+\rho}\frac{C_{2,t+1}^{1-\theta}}{1-\theta}
+\]
+\[
+\mathrm{s.t.}\;C_{1,t}+ \frac{1}{1+r_{t+1}}C_{2,t+1}=A_tw_t
+\]
+The Euler equation is 
+\[
+\frac{C_{2,t+1}}{C_{1,t}}=\left(\frac{1+r_{t+1}}{1+\rho}\right)^{\tfrac{1}{\theta}}
+\]
 
 \section{Content Section} % Major section
 
